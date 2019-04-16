@@ -70,7 +70,7 @@ def for_one_sample(sample, filepath):
     
             
 solve_for_different_file('dataset.csv')
-#solve_for_different_file('dataset1.csv')
+#solve_for_different_file('dataset1.csv') Uncomment me to check accuracy on a bigger dataset
 for_one_sample(pd.DataFrame({'X' : [6], 'Y' : [6]}), 'dataset.csv')
 
 
