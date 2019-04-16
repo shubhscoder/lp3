@@ -166,6 +166,7 @@ class DescisionTreeClassifier():
 
 gV.df = read_input()
 gV.df = clean_up(gV.df)
+print(gV.df)
 transform_categorical(gV.df)
 #summarize_data(gV.df)
 gV.x_train, gV.x_test, gV.y_train, gV.y_test = train_test_split(gV.df, 0.3, ['Buys'])
@@ -184,9 +185,11 @@ print("Accuracy Score1 : " + str(accuracy_score(y_pred, gV.y_test)))
 print("Accuracy Score2 : " + str(accuracy_score(y_pred2, gV.y_test)))
 #Sample example test
 data = [["< 21", "Low", "Female", "Married"]]
-df = pd.DataFrame(data, columns=['Age', 'Income', 'Gender', 'Martial Status'])
+df = pd.DataFrame(data, columns = ['Age', 'Income', 'Gender', 'Martial Status'])
 transform_categorical(df)
 if predict_class(df.iloc[0], model.tree):
     print("Yes")
 else:
     print("No")
+    
+print(model.tree)
