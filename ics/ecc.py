@@ -17,7 +17,7 @@ class gV:
     #initialization by default values, input may overwrite these default values
     a = 0
     b = 7
-    n = 2**256 - 189
+    n = 137
     G = [1, 75]
     na = None
     nb = None
